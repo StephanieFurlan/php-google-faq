@@ -32,7 +32,9 @@ $faqs = [
          "In some cases, yes. When you click on a search result in Google Search, your web browser also may send the Internet address, or URL, of the search results page to the destination webpage as the <a href=''>Referrer URL</a>. The URL of the search results page may sometimes contain the search query you entered. If you are using SSL Search (Google’s encrypted search functionality), under most circumstances, your search terms will not be sent as part of the URL in the Referrer URL. There are some exceptions to this behavior, such as if you are using some less popular browsers. More information on SSL Search can be found <a href=''>here</a>. Search queries or information contained in the Referrer URL may be available via Google Analytics or an application programming interface (API). In addition, advertisers may receive information relating to the exact keywords that triggered an ad click."
       ]
    ]
-]
+];
+
+$menu = [ "Overview", "Privacy Policy", "Terms of Service", "Tehnologies", "FAQ"];
 
 ?>
 
@@ -43,12 +45,35 @@ $faqs = [
       <meta charset="utf-8">
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
       <link rel="stylesheet" href="style.css">
       <title></title>
    </head>
    <body>
       <header>
-         MY HEADER
+         <div id="header-top">
+            <div class="logo">
+               <img src="https://www.drcommodore.it/wp-content/uploads/2020/07/pngwing.com_.png" alt="">
+               <h1>Privacy & Terms</h1>
+            </div>
+            <div class="icons">
+               <i class="fas fa-th"></i>
+               <i class="fas fa-user"></i>
+            </div>
+         </div>
+         <div id="nav-bar">
+            <ul id="menu">
+               <?php foreach($menu as $item) { ?>
+                  <li>
+                     <?php if($item == "FAQ") { ?>
+                        <a class="active" href="#"><?php echo $item ?> </a>
+                     <?php } else { ?>
+                        <a href="#"><?php echo $item ?> </a>
+                     <?php } ?>
+                  </li>
+               <?php } ?>
+            </ul>
+         </div>
       </header>
       <main>
          <?php foreach($faqs as $faq) { ?>
