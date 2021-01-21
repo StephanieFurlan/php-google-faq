@@ -1,0 +1,36 @@
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   font-family: 'Roboto', sans-serif;
+   font-weight: 300;
+   font-size: 14px;
+   line-height: 24px;
+}
+
+main {
+   width: 65%;
+   max-width: 1140px;
+   margin: 0 auto;
+   padding: 32px;
+}
+
+.question h2 {
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 600;
+   font-size: 24px;
+   padding-top: 64px;
+   line-height: 32px;
+}
+.question a {
+   text-decoration: none;
+   color: #3367D6;
+}
+
+.question p {
+   margin: 10px 0;
+   padding-top: 20px;
+}
